@@ -5,13 +5,13 @@
 }
 
 body {
-  font-family: 'Muli', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
   margin: 0;
+  overflow: hidden;
+  font-family: 'Muli', sans-serif;
 }
 
 .container {
@@ -19,29 +19,36 @@ body {
   width: 90vw;
 }
 
+/* flex 无单位数字时其实就是 flex-grow，此时 flex-basis 为 0 */
+/* 有单位数字代表 flex-basis */
+/* flex: 1; === flex: 1 1 0; */
 .panel {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
+  flex: 0.5;
   height: 80vh;
+  margin: 10px;
   border-radius: 50px;
+  /* 图片设置三连 */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #fff;
   cursor: pointer;
-  flex: 0.5;
-  margin: 10px;
-  position: relative;
-  -webkit-transition: all 700ms ease-in;
+  transition: all 700ms ease-in;
 }
 
 .panel h3 {
-  font-size: 24px;
   position: absolute;
   bottom: 20px;
   left: 20px;
   margin: 0;
+  font-size: 24px;
+  /* active 后才显示 */
   opacity: 0;
 }
 
+/* 被选中就占大份 */
+/* 5/7 */
 .panel.active {
   flex: 5;
 }
@@ -51,6 +58,8 @@ body {
   transition: opacity 0.3s ease-in 0.4s;
 }
 
+/* mobile first */
+/* 缩减到三个 panel */
 @media (max-width: 480px) {
   .container {
     width: 100vw;

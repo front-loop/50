@@ -3,7 +3,6 @@
 :root {
   --line-border-fill: #3498db;
   --line-border-empty: #383838;
-
 }
 
 * {
@@ -11,14 +10,14 @@
 }
 
 body {
-  background-color: #1f1f1f;
-  font-family: 'Muli', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
   margin: 0;
+  overflow: hidden;
+  background-color: #1f1f1f;
+  font-family: 'Muli', sans-serif;
 }
 
 .container {
@@ -27,47 +26,52 @@ body {
 
 .progress-container {
   display: flex;
-  justify-content: space-between;
   position: relative;
-  margin-bottom: 30px;
-  max-width: 100%;
+  justify-content: space-between;
   width: 350px;
+  max-width: 100%;
+  margin-bottom: 30px;
 }
 
+/* ::before 定义的是没有 active 的背景灰色进度条 */
 .progress-container::before {
-  content: '';
-  background-color: var(--line-border-empty);
+  z-index: -1;
   position: absolute;
+  /* absolute 垂直居中 */
+  /* top + transform */
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
-  height: 4px;
   width: 100%;
-  z-index: -1;
+  height: 4px;
+  transform: translateY(-50%);
+  background-color: var(--line-border-empty);
+  content: '';
 }
 
+/* 同 ::before 定义，颜色不同 */
+/* width 默认为 0，通过 js 来计算 */
 .progress {
-  background-color: var(--line-border-fill);
+  z-index: -1;
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
-  height: 4px;
   width: 0%;
-  z-index: -1;
+  height: 4px;
+  transform: translateY(-50%);
+  background-color: var(--line-border-fill);
   transition: 0.4s ease;
 }
 
 .circle {
-  background-color: #1f1f1f;
-  color:#e2e2e2;
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 30px;
+  height: 30px;
   border: 3px solid var(--line-border-empty);
+  border-radius: 50%;
+  background-color: #1f1f1f;
+  color: #e2e2e2;
   transition: 0.4s ease;
 }
 
@@ -76,15 +80,15 @@ body {
 }
 
 .btn {
-  background-color: var(--line-border-fill);
-  color: #fff;
+  margin: 5px;
+  padding: 8px 30px;
   border: 0;
   border-radius: 6px;
-  cursor: pointer;
-  font-family: inherit;
-  padding: 8px 30px;
-  margin: 5px;
+  background-color: var(--line-border-fill);
+  color: #fff;
   font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
 }
 
 .btn:active {

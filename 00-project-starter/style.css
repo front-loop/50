@@ -5,12 +5,16 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  /* 经典居中五连，注意容器高度 */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
+  /* 清空 body 的默认 margin  */
   margin: 0;
+  /* 溢出隐藏 */
+  overflow: hidden;
+  /* 改字体 */
+  font-family: 'Roboto', sans-serif;
 }
