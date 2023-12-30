@@ -6,88 +6,97 @@
 }
 
 body {
-  background-color: #fafafa;
-  font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
+  background-color: #fafafa;
+  font-family: 'Roboto', sans-serif;
 }
 
+/* 按钮设置 */
 .magic {
-  background-color: #f9ca24;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-  border: 0;
-  border-radius: 3px;
-  font-size: 16px;
-  padding: 12px 20px;
-  cursor: pointer;
+  z-index: 100;
   position: fixed;
   top: 20px;
-  letter-spacing: 1px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 3px;
+  background-color: #f9ca24;
   box-shadow: 0 3px rgba(249, 202, 36, 0.5);
-  z-index: 100;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
 .magic:focus {
   outline: none;
 }
 
+/* 按下效果 */
 .magic:active {
-  box-shadow: none;
   transform: translateY(2px);
+  box-shadow: none;
 }
 
+/* 最开始 500*500 的显示完整图片 */
 .boxes {
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   justify-content: space-around;
-  height: 500px;
   width: 500px;
-  position: relative;
+  height: 500px;
   transition: 0.4s ease;
 }
 
+/* big 状态下调整宽高 */
 .boxes.big {
   width: 600px;
   height: 600px;
 }
 
+/* 点击 toggle big 类时旋转内部盒子 */
 .boxes.big .box {
   transform: rotateZ(360deg);
 }
 
 .box {
-  background-image: url('https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif');
-  background-repeat: no-repeat;
-  background-size: 500px 500px;
   position: relative;
-  height: 125px;
   width: 125px;
+  height: 125px;
+  background-image: url('https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif');
+  background-size: 500px 500px;
+  background-repeat: no-repeat;
   transition: 0.4s ease;
 }
 
+/* 利用明暗色来做立方体的感觉 */
+/* 右侧 */
 .box::after {
-  content: '';
-  background-color: #f6e58d;
   position: absolute;
   top: 8px;
   right: -15px;
-  height: 100%;
   width: 15px;
+  height: 100%;
+  /* 沿着纵坐标顺时针扭曲 45° */
   transform: skewY(45deg);
+  background-color: #f6e58d;
+  content: '';
 }
 
+/* 下方 */
 .box::before {
-  content: '';
-  background-color: #f9ca24;
   position: absolute;
   bottom: -15px;
   left: 8px;
-  height: 15px;
   width: 100%;
+  height: 15px;
   transform: skewX(45deg);
+  background-color: #f9ca24;
+  content: '';
 }
