@@ -5,39 +5,42 @@
 }
 
 body {
-  background-color: #efedd6;
-  font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0;
   overflow-x: hidden;
+  background-color: #efedd6;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
   margin: 10px;
 }
 
+/* 排列左右两边 */
 .box {
-  background-color: steelblue;
-  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 400px;
   height: 200px;
   margin: 10px;
-  border-radius: 10px;
-  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
   transform: translateX(400%);
+  border-radius: 10px;
+  background-color: steelblue;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  color: #fff;
   transition: transform 0.4s ease;
 }
 
+/* even 偶数在左边 */
 .box:nth-of-type(even) {
   transform: translateX(-400%);
 }
 
+/* 相对视口顶部位置一定距离就出现 */
 .box.show {
   transform: translateX(0);
 }
