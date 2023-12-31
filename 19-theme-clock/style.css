@@ -13,6 +13,7 @@ html {
   transition: all 0.5s ease-in;
 }
 
+/* dark mode */
 html.dark {
   --primary-color: #fff;
   --secondary-color: #333;
@@ -24,24 +25,24 @@ html.dark {
 }
 
 body {
-  font-family: 'Heebo', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
   margin: 0;
+  overflow: hidden;
+  font-family: 'Heebo', sans-serif;
 }
 
 .toggle {
-  cursor: pointer;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  border: 0;
-  border-radius: 4px;
-  padding: 8px 12px;
   position: absolute;
   top: 100px;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
 }
 
 .toggle:focus {
@@ -51,24 +52,26 @@ body {
 .clock-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
+/* relative and absolute */
 .clock {
   position: relative;
   width: 200px;
   height: 200px;
 }
 
+/* 一条竖线，圆心在底部中心 */
 .needle {
-  background-color: var(--primary-color);
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 65px;
   width: 3px;
+  height: 65px;
   transform-origin: bottom center;
+  background-color: var(--primary-color);
   transition: all 0.5s ease-in;
 }
 
@@ -77,37 +80,39 @@ body {
 }
 
 .needle.minute {
-  transform: translate(-50%, -100%) rotate(0deg);
   height: 100px;
+  transform: translate(-50%, -100%) rotate(0deg);
 }
 
 .needle.second {
-  transform: translate(-50%, -100%) rotate(0deg);
   height: 100px;
+  transform: translate(-50%, -100%) rotate(0deg);
   background-color: #e74c3c;
 }
 
+/* 圆心外层 */
 .center-point {
-  background-color: #e74c3c;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 10px;
   height: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
+  background-color: #e74c3c;
 }
 
+/* 圆心内层 */
 .center-point::after {
-  content: '';
-  background-color: var(--primary-color);
-  width: 5px;
-  height: 5px;
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 5px;
+  height: 5px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
+  background-color: var(--primary-color);
+  content: '';
 }
 
 .time {
@@ -122,15 +127,15 @@ body {
 }
 
 .date .circle {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  border-radius: 50%;
-  height: 18px;
-  width: 18px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 12px;
   line-height: 18px;
   transition: all 0.5s ease-in;
-  font-size: 12px;
 }

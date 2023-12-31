@@ -20,5 +20,5 @@ function blurring() {
 // 抽象出一个函数用于将一个范围内的数映射到另一个范围内
 // https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
 const scale = (num, in_min, in_max, out_min, out_max) => {
-  return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
+  return (num - in_min) / (in_max - in_min) * (out_max - out_min) + out_min
 }

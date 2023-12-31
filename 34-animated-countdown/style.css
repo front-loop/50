@@ -5,15 +5,15 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
   height: 100vh;
+  margin: 0;
   overflow: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 h4 {
-  font-size: 20px;
   margin: 5px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 
@@ -25,6 +25,7 @@ h4 {
   text-align: center;
 }
 
+/* 注意 transform 是一种状态不可能保留的，所以要一次一次的写 */
 .counter.hide {
   transform: translate(-50%, -50%) scale(0);
   animation: hide 0.2s ease-out;
@@ -48,6 +49,7 @@ h4 {
   text-align: center;
 }
 
+/* scale 0 到 1，像跳出来一样 */
 .final.show {
   transform: translate(-50%, -50%) scale(1);
   animation: show 0.2s ease-out;
@@ -68,12 +70,12 @@ h4 {
 }
 
 .nums {
-  color: #3498db;
-  font-size: 50px;
   position: relative;
-  overflow: hidden;
   width: 250px;
   height: 50px;
+  overflow: hidden;
+  color: #3498db;
+  font-size: 50px;
 }
 
 .nums span {
@@ -93,6 +95,7 @@ h4 {
   animation: goOut 0.5s ease-in-out;
 }
 
+/* 数字 in 和 out，向左旋转然后消失 */
 @keyframes goIn {
   0% {
     transform: translate(-50%, -50%) rotate(120deg);
@@ -111,6 +114,7 @@ h4 {
   }
 }
 
+/* 先向右小幅度再向左大幅度，会有一个摆头的动画效果 */
 @keyframes goOut {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -125,39 +129,40 @@ h4 {
   }
 }
 
-#replay{
-  background-color: #3498db;
-  border-radius: 3px;
-  border: none;
-  color: aliceblue;
-  padding: 5px;
-  text-align: center;
+#replay {
   display: inline-block;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  background-color: #3498db;
+  color: aliceblue;
+  text-align: center;
   cursor: pointer;
   transition: all 0.3s;
 }
 
-#replay span{
-  cursor: pointer;
+#replay span {
   display: inline-block;
   position: relative;
+  cursor: pointer;
   transition: 0.3s;
 }
 
-#replay span:after{
-  content: '\00bb';
+/* hover 时出现的 >> */
+#replay span:after {
   position: absolute;
-  opacity: 0;
   top: 0;
   right: -20px;
+  content: '\00bb';
+  opacity: 0;
   transition: 0.5s;
 }
 
-#replay:hover span{
+#replay:hover span {
   padding-right: 25px;
 }
 
-#replay:hover span:after{
-  opacity: 1;
+#replay:hover span:after {
   right: 0;
+  opacity: 1;
 }
