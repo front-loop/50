@@ -8,18 +8,17 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
   margin: 0;
+  overflow: hidden;
 }
 
 .background {
-  background: url('https://images.unsplash.com/photo-1556745757-8d76bdb6984b')
-    no-repeat center center/cover;
+  z-index: -1;
   position: absolute;
   top: -20px;
+  right: -20px;
   bottom: -20px;
   left: -20px;
-  right: -20px;
-  z-index: -1;
+  background: url('https://images.unsplash.com/photo-1556745757-8d76bdb6984b') no-repeat center center/cover;
   filter: blur(20px);
 }

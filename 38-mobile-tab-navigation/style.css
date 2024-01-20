@@ -5,35 +5,36 @@
 }
 
 body {
-  background-color: rgba(155, 89, 182, 0.7);
-  font-family: 'Open Sans', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   margin: 0;
+  background-color: rgba(155, 89, 182, 0.7);
+  font-family: 'Open Sans', sans-serif;
 }
 
 .phone {
   position: relative;
+  width: 340px;
+  height: 600px;
   overflow: hidden;
   border: 3px solid #eee;
   border-radius: 15px;
-  height: 600px;
-  width: 340px;
 }
 
 .phone .content {
-  opacity: 0;
-  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
-  height: calc(100% - 60px);
   width: 100%;
+  height: calc(100% - 60px);
+  object-fit: cover;
+  opacity: 0;
   transition: opacity 0.4s ease;
 }
 
+/* 用 opacity 控制图片展示 */
 .phone .content.show {
   opacity: 1;
 }
@@ -42,32 +43,33 @@ nav {
   position: absolute;
   bottom: 0;
   left: 0;
-  margin-top: -5px;
   width: 100%;
+  margin-top: -5px;
 }
 
 nav ul {
-  background-color: #fff;
   display: flex;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
   height: 60px;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  list-style-type: none;
 }
 
 nav li {
-  color: #777;
-  cursor: pointer;
   flex: 1;
   padding: 10px;
+  color: #777;
   text-align: center;
+  cursor: pointer;
 }
 
 nav ul li p {
-  font-size: 12px;
   margin: 2px 0;
+  font-size: 12px;
 }
 
+/* active 颜色变化 */
 nav ul li:hover,
 nav ul li.active {
   color: #8e44ad;
