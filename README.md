@@ -3,15 +3,15 @@
 | #      | Project                                                                                         |
 | :----- | :---------------------------------------------------------------------------------------------- |
 | Source | [50 Days 50 Projects](https://github.com/bradtraversy/50projects50days)                         |
-| 1      | [Expanding Cards](https://front-loop.github.io/50/01-expanding-cards)                           |
-| 2      | [Progress Steps](https://front-loop.github.io/50/02-progress-steps)                             |
-| 3      | [Rotating Navigation](https://front-loop.github.io/50/03-rotating-navigation)                   |
-| 4      | [Hidden Search Widget](https://front-loop.github.io/50/04-hidden-search-widget)                 |
-| 5      | [Blurry Loading](https://front-loop.github.io/50/05-blurry-loading)                             |
-| 6      | [Scroll Animation](https://front-loop.github.io/50/06-scroll-animation)                         |
-| 7      | [Split Landing Page](https://front-loop.github.io/50/07-split-landing-page)                     |
-| 8      | [Form Wave](https://front-loop.github.io/50/08-form-wave)                                       |
-| 9      | [Sound Board](https://front-loop.github.io/50/09-sound-board)                                   |
+| 01     | [Expanding Cards](https://front-loop.github.io/50/01-expanding-cards)                           |
+| 02     | [Progress Steps](https://front-loop.github.io/50/02-progress-steps)                             |
+| 03     | [Rotating Navigation](https://front-loop.github.io/50/03-rotating-navigation)                   |
+| 04     | [Hidden Search Widget](https://front-loop.github.io/50/04-hidden-search-widget)                 |
+| 05     | [Blurry Loading](https://front-loop.github.io/50/05-blurry-loading)                             |
+| 06     | [Scroll Animation](https://front-loop.github.io/50/06-scroll-animation)                         |
+| 07     | [Split Landing Page](https://front-loop.github.io/50/07-split-landing-page)                     |
+| 08     | [Form Wave](https://front-loop.github.io/50/08-form-wave)                                       |
+| 09     | [Sound Board](https://front-loop.github.io/50/09-sound-board)                                   |
 | 10     | [Dad Jokes](https://front-loop.github.io/50/10-dad-jokes)                                       |
 | 11     | [Event Keycodes](https://front-loop.github.io/50/11-event-keycodes)                             |
 | 12     | [FAQ Collapse](https://front-loop.github.io/50/12-faq-collapse)                                 |
