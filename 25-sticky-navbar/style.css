@@ -7,9 +7,9 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  color: #222;
   padding-bottom: 50px;
+  color: #222;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .container {
@@ -19,32 +19,32 @@ body {
 
 .nav {
   position: fixed;
-  background-color: #222;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
+  background-color: #222;
   transition: all 0.3s ease-in-out;
 }
 
 .nav .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 20px 0;
   transition: all 0.3s ease-in-out;
 }
 
 .nav ul {
   display: flex;
-  list-style-type: none;
   align-items: center;
   justify-content: center;
+  list-style-type: none;
 }
 
 .nav a {
+  padding: 7px 15px;
   color: #fff;
   text-decoration: none;
-  padding: 7px 15px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -68,35 +68,35 @@ body {
 }
 
 .hero {
-  background-image: url('https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center;
-  height: 100vh;
-  color: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  margin-bottom: 20px;
   z-index: -2;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-bottom: 20px;
+  background-image: url('https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
 }
 
 .hero::before {
-  content: '';
+  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: -1;
+  content: '';
 }
 
 .hero h1 {
-  font-size: 46px;
   margin: -20px 0 20px;
+  font-size: 46px;
 }
 
 .hero p {
@@ -106,8 +106,8 @@ body {
 
 .content h2,
 .content h3 {
-  font-size: 150%;
   margin: 20px 0;
+  font-size: 150%;
 }
 
 .content p {

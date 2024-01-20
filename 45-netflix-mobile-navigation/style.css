@@ -5,12 +5,12 @@
 }
 
 body {
-  font-family: 'Muli', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  font-family: 'Muli', sans-serif;
 }
 
 .text {
@@ -24,8 +24,8 @@ body {
 .nav-btn {
   border: none;
   background-color: transparent;
-  cursor: pointer;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .open-btn {
@@ -39,6 +39,7 @@ body {
   top: 0;
   left: 0;
   height: 100vh;
+  /* 左移隐藏，点击出现还能做右移动画 */
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
 }
@@ -47,11 +48,12 @@ body {
   transform: translateX(0);
 }
 
+/* delay 时间不同，出现时间不同，width 多出一点来叠加 */
 .nav-black {
-  background-color: rgb(34, 31, 31);
   width: 60%;
-  max-width: 480px;
   min-width: 320px;
+  max-width: 480px;
+  background-color: rgb(34, 31, 31);
   transition-delay: 0.4s;
 }
 
@@ -60,8 +62,8 @@ body {
 }
 
 .nav-red {
-  background-color: rgb(229, 9, 20);
   width: 95%;
+  background-color: rgb(229, 9, 20);
   transition-delay: 0.2s;
 }
 
@@ -70,10 +72,10 @@ body {
 }
 
 .nav-white {
-  background-color: #fff;
+  position: relative;
   width: 95%;
   padding: 40px;
-  position: relative;
+  background-color: #fff;
   transition-delay: 0s;
 }
 
@@ -82,15 +84,15 @@ body {
 }
 
 .close-btn {
-  opacity: 0.3;
   position: absolute;
   top: 40px;
   right: 30px;
+  opacity: 0.3;
 }
 
 .list {
-  list-style-type: none;
   padding: 0;
+  list-style-type: none;
 }
 
 .list li {
@@ -105,6 +107,6 @@ body {
 }
 
 .list ul {
-  list-style-type: none;
   padding-left: 20px;
+  list-style-type: none;
 }

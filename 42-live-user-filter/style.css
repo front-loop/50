@@ -5,21 +5,21 @@
 }
 
 body {
-  background-color: #f8f9fd;
-  font-family: 'Roboto', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
   margin: 0;
+  overflow: hidden;
+  background-color: #f8f9fd;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
+  width: 300px;
+  overflow: hidden;
   border-radius: 5px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  width: 300px;
 }
 
 .title {
@@ -33,19 +33,19 @@ body {
 }
 
 .header {
+  padding: 30px 20px;
   background-color: #3e57db;
   color: #fff;
-  padding: 30px 20px;
 }
 
 .header input {
-  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 10px 15px;
   border: 0;
   border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
   font-size: 14px;
-  padding: 10px 15px;
-  width: 100%;
 }
 
 .header input:focus {
@@ -53,12 +53,12 @@ body {
 }
 
 .user-list {
-  background-color: #fff;
-  list-style-type: none;
+  max-height: 400px;
   margin: 0;
   padding: 0;
-  max-height: 400px;
   overflow-y: auto;
+  background-color: #fff;
+  list-style-type: none;
 }
 
 .user-list li {
@@ -67,10 +67,10 @@ body {
 }
 
 .user-list img {
-  border-radius: 50%;
-  object-fit: cover;
-  height: 50px;
   width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .user-list .user-info {
@@ -89,6 +89,7 @@ body {
   border-bottom: 1px solid #eee;
 }
 
+/* 经典 hidden */
 .user-list li.hide {
   display: none;
 }
